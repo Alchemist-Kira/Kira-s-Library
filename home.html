@@ -1,0 +1,203 @@
+<html>
+  <head>
+    <title>Library Management System</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f0f0;
+      }
+
+      header {
+        background-color: #333;
+        color: #fff;
+        padding: 10px 0;
+        text-align: center;
+      }
+
+      nav ul {
+        list-style-type: none;
+        padding: 0;
+        text-align: center;
+      }
+
+      nav ul li {
+        display: inline;
+        margin: 0 10px;
+      }
+
+      nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      nav ul li a:hover {
+        color: #ccc;
+      }
+
+      main {
+        padding: 20px;
+        max-width: 800px;
+        margin: 20px auto;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+      }
+
+      section {
+        margin-bottom: 20px;
+      }
+
+      h2 {
+        color: #333;
+      }
+
+      .book,
+      .member {
+        background-color: #f9f9f9;
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+      }
+
+      .book img,
+      .member img {
+        max-width: 100px;
+        max-height: 120px;
+        border-radius: 4px;
+        margin-right: 20px;
+      }
+
+      .book-info,
+      .member-info {
+        flex: 1;
+      }
+
+      footer {
+        text-align: center;
+        padding: 10px 0;
+        background-color: #333;
+        color: #fff;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+      }
+
+      form {
+        margin-top: 10px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+        color: #333;
+      }
+
+      input[type="text"],
+      button {
+        padding: 8px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+
+      button {
+        cursor: pointer;
+        background-color: #333;
+        color: #fff;
+        border: none;
+        margin-top: 5px;
+      }
+
+      button:hover {
+        background-color: #555;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Library Management System</h1>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#books">Books</a></li>
+          <li><a href="#members">Members</a></li>
+          <li><a href="#borrow">Borrow/Return</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home">
+        <h2>Welcome to Our Library</h2>
+        <p>Here you can find books, manage members, and track borrowing.</p>
+      </section>
+
+      <section id="books">
+        <h2>Books</h2>
+        <div class="book-list">
+          <div class="book">
+            <img src="asset/book1.jpg" alt="Book Image" />
+            <div class="book-info">
+              <h3>Title: Pilgrim's Progress</h3>
+              <p>Author: John Bunyan</p>
+              <p>ISBN: 1234567890</p>
+              <button>Borrow</button>
+            </div>
+          </div>
+          <div class="book">
+            <img src="asset/book2.jpg" alt="Book Image" />
+            <div class="book-info">
+              <h3>Title: Robinson Crusoe</h3>
+              <p>Author: Daniel Defoe</p>
+              <p>ISBN: 0987654321</p>
+              <button>Borrow</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="members">
+        <h2>Members</h2>
+        <div class="member-list">
+          <div class="member">
+            <img src="asset/user.jpg" alt="Member Image" />
+            <div class="member-info">
+              <h3>Name: Abdul Al Mahfuz</h3>
+              <p>Member ID: C231303</p>
+              <p>Email: mahfuz123@gmail.com</p>
+              <button>Details</button>
+            </div>
+          </div>
+          <div class="member">
+            <img src="asset/user.jpg" alt="Member Image" />
+            <div class="member-info">
+              <h3>Name: Imran Abid</h3>
+              <p>Member ID: C231302</p>
+              <p>Email: imranabid@gmail.com</p>
+              <button>Details</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="borrow">
+        <h2>Borrow/Return</h2>
+        <form id="borrow-form">
+          <label for="member-id">Member ID:</label>
+          <input type="text" id="member-id" name="member-id" required />
+
+          <label for="book-isbn">Book ISBN:</label>
+          <input type="text" id="book-isbn" name="book-isbn" required />
+
+          <button type="submit">Borrow</button>
+          <button type="reset">Reset</button>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
